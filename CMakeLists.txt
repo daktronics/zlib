@@ -5,14 +5,8 @@ project(zlib C)
 
 set(VERSION "1.3.0.1")
 
-if(${CMAKE_SOURCE_DIR} STREQUAL ${CMAKE_CURRENT_SOURCE_DIR})
-  set(ZLIB_BUNDLED OFF)
-else()
-  set(ZLIB_BUNDLED ON)
-endif()
-
 option(ZLIB_BUILD_EXAMPLES
-  "Should Zlib build its examples." ${ZLIB_BUNDLED})
+  "Should Zlib build its examples." ON)
 
 set(INSTALL_BIN_DIR "${CMAKE_INSTALL_PREFIX}/bin" CACHE PATH "Installation directory for executables")
 set(INSTALL_LIB_DIR "${CMAKE_INSTALL_PREFIX}/lib" CACHE PATH "Installation directory for libraries")
